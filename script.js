@@ -8,32 +8,34 @@ const dots = document.querySelectorAll('.dot');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-let current = 0;
-let autoTimer = null;
+if (slides.length > 0 && prevBtn && nextBtn) {
+    let current = 0;
+    let autoTimer = null;
 
-function showSlide(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-}
+    function showSlide(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
 
-function startAuto() {
-    autoTimer = setInterval(() => showSlide(current + 1), 4000);
-}
-function resetAuto() {
-    clearInterval(autoTimer);
+    function startAuto() {
+        autoTimer = setInterval(() => showSlide(current + 1), 4000);
+    }
+    function resetAuto() {
+        clearInterval(autoTimer);
+        startAuto();
+    }
+
+    prevBtn.addEventListener('click', () => { showSlide(current - 1); resetAuto(); });
+    nextBtn.addEventListener('click', () => { showSlide(current + 1); resetAuto(); });
+    dots.forEach(dot => dot.addEventListener('click', () => {
+        showSlide(+dot.dataset.index); resetAuto();
+    }));
+
     startAuto();
 }
-
-prevBtn.addEventListener('click', () => { showSlide(current - 1); resetAuto(); });
-nextBtn.addEventListener('click', () => { showSlide(current + 1); resetAuto(); });
-dots.forEach(dot => dot.addEventListener('click', () => {
-    showSlide(+dot.dataset.index); resetAuto();
-}));
-
-startAuto();
 
 /* ---------- Mobile Nav Toggle ---------- */
 const hamburger = document.getElementById('hamburgerBtn');
