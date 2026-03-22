@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff – Medhaa's Rainbow School</title>
+    <meta name="description"
+        content="Meet the dedicated staff and leadership team of Medhaa's Rainbow School, ECIL, Hyderabad." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* ---- Staff Page Specific Styles ---- */
+        .page-hero {
+            background: linear-gradient(135deg, var(--yellow) 0%, #fff5b0 100%);
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .page-hero .shape {
+            opacity: 0.12;
+        }
+
+        /* Principal Spotlight */
+        .principal-section {
+            padding: 5rem 2rem;
+            background: var(--yellow);
+        }
+
+        .principal-card {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.14);
+            position: relative;
+        }
+
+        .principal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--rainbow-1), var(--rainbow-3), var(--rainbow-5), var(--rainbow-6));
+        }
+
+        .principal-img-wrap {
+            flex: 0 0 340px;
+            height: 420px;
+            overflow: hidden;
+        }
+
+        .principal-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.5s ease;
+        }
+
+        .principal-card:hover .principal-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .principal-info {
+            padding: 2.5rem 2.5rem 2.5rem 2rem;
+            flex: 1;
+        }
+
+        .principal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--yellow);
+            color: var(--dark);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .principal-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--dark);
+            line-height: 1.15;
+            margin-bottom: 0.3rem;
+        }
+
+        .principal-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--rainbow-1);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.04em;
+        }
+
+        .principal-divider {
+            width: 48px;
+            height: 4px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--rainbow-1), var(--rainbow-5));
+            margin-bottom: 1.2rem;
+        }
+
+        .principal-message {
+            font-size: 0.97rem;
+            line-height: 1.75;
+            color: #555;
+        }
+
+        .principal-message strong {
+            color: var(--dark);
+        }
+
+        /* Staff Grid */
+        .staff-section {
+            padding: 5rem 2rem;
+            background: #fff9d6;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .staff-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform var(--transition), box-shadow var(--transition);
+            border-bottom: 4px solid var(--yellow);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .staff-card-avatar {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--yellow-light), #ffe066);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .staff-card-body {
+            padding: 1.2rem 1rem;
+        }
+
+        .staff-card-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .staff-card-body p {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* School Staff Gallery */
+        .school-staff-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .staff-photo-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 56px rgba(0, 0, 0, 0.16);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .staff-photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+        }
+
+        .staff-photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .staff-photo-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .staff-photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.2rem 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .principal-card {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .principal-card::before {
+                width: 100%;
+                height: 6px;
+            }
+
+            .principal-img-wrap {
+                flex: none;
+                width: 100%;
+                height: 300px;
+            }
+
+            .principal-info {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-block">
+                <div class="logo-icon">🌈</div>
+                <div class="logo-text">
+                    <span class="school-name">Medhaa's Rainbow</span>
+                    <span class="school-tagline">School of Excellence</span>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                <li><a href="index.html#admissions" class="nav-link">Admissions</a></li>
+                <li><a href="staff.html" class="nav-link active">Staff</a></li>
+                <li><a href="index.html#academics" class="nav-link">Academics</a></li>
+                <li><a href="index.html#sports" class="nav-link">Sports</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <h1>Our Staff</h1>
+        <p>Meet the dedicated team shaping the future of our students</p>
+    </section>
+
+    <!-- ===== PRINCIPAL SPOTLIGHT ===== -->
+    <section class="principal-section">
+        <div class="section-header">
+            <h2 class="section-title">Leadership</h2>
+            <p class="section-subtitle">Guiding us with vision and dedication</p>
+        </div>
+
+        <div class="principal-card">
+            <div class="principal-img-wrap">
+                <img src="images/principal.jpg" alt="Principal – Medhaa's Rainbow School" />
+            </div>
+            <div class="principal-info">
+                <span class="principal-badge">⭐ School Principal</span>
+                <h2 class="principal-name">Mrs. B. Phani Madhavi</h2>
+                <p class="principal-title">Principal – Medhaa's Rainbow School, ECIL, Hyderabad</p>
+                <div class="principal-divider"></div>
+                <p class="principal-message">
+                    Welcome to <strong>Medhaa's Rainbow School</strong>! We believe every child is unique and
+                    deserves an education that nurtures their individual strengths.
+                    Our school is committed to providing a safe, inclusive, and inspiring environment
+                    where students grow academically, socially, and emotionally.
+                    Together, we build a <strong>brighter, more colorful future</strong> — one child at a time. 🌈
+                </p>
+            </div>
+        </div>
+
+        <!-- Correspondent Card -->
+        <div class="principal-card" style="margin-top: 2.5rem;">
+            <div class="principal-img-wrap">
+                <img src="images/correspondent.jpg" alt="Correspondent – Medhaa's Rainbow School" />
+            </div>
+            <div class="principal-info">
+                <span class="principal-badge">🎯 Correspondent</span>
+                <h2 class="principal-name">Mr. B. Venkata Ramana</h2>
+                <p class="principal-title">Correspondent – Medhaa's Rainbow School, ECIL, Hyderabad</p>
+                <div class="principal-divider"></div>
+                <p class="principal-message">
+                    At <strong>Medhaa's Rainbow School</strong>, we are dedicated to bridging the gap
+                    between administration and academics, ensuring every student and family receives the
+                    support they deserve. Our commitment is to build a
+                    <strong>transparent, nurturing, and forward-thinking</strong> institution that the
+                    entire community can be proud of. 🌈
+                </p>
+            </div>
+        </div>
+
+        <!-- Academic Co-ordinator Card -->
+        <div class="principal-card" style="margin-top: 2.5rem;">
+            <div class="principal-img-wrap">
+                <img src="images/academic_coordinator.jpg" alt="Academic Co-ordinator – Medhaa's Rainbow School" />
+            </div>
+            <div class="principal-info">
+                <span class="principal-badge">📚 Academic Co-ordinator</span>
+                <h2 class="principal-name">Mrs. Ch. Vandana</h2>
+                <p class="principal-title">Academic Co-ordinator – Medhaa's Rainbow School, ECIL, Hyderabad</p>
+                <div class="principal-divider"></div>
+                <p class="principal-message">
+                    At <strong>Medhaa's Rainbow School</strong>, our academic programmes are carefully
+                    designed to unlock every student's potential. We focus on fostering
+                    <strong>critical thinking, creativity, and a lifelong love for learning</strong>.
+                    Together with our dedicated teachers, we ensure every child receives the attention
+                    and guidance they deserve. 🌈
+                </p>
+            </div>
+        </div>
+
+        <!-- Academic Counsellor Card -->
+        <div class="principal-card" style="margin-top: 2.5rem;">
+            <div class="principal-img-wrap">
+                <img src="images/academic_counsellor.jpg" alt="Academic Counsellor – K. Shilpa" />
+            </div>
+            <div class="principal-info">
+                <span class="principal-badge">🌟 Academic Counsellor</span>
+                <h2 class="principal-name">Mrs. K. Shilpa</h2>
+                <p class="principal-title">Academic Counsellor – Medhaa's Rainbow School, ECIL, Hyderabad</p>
+                <div class="principal-divider"></div>
+                <p class="principal-message">
+                    At <strong>Medhaa's Rainbow School</strong>, we are passionate about guiding every
+                    student towards their best potential. Through personalised counselling and support,
+                    we help students navigate their academic journey with
+                    <strong>confidence, clarity, and purpose</strong>. Every child's success
+                    is our greatest achievement. 🌈
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHOLE SCHOOL STAFF ===== -->
+    <section class="staff-section">
+        <div class="section-header">
+            <h2 class="section-title">Our School Staff</h2>
+            <p class="section-subtitle">The dedicated family behind Medhaa's Rainbow School</p>
+        </div>
+        <div class="school-staff-gallery">
+            <div class="staff-photo-card">
+                <img src="images/staff_group1.jpg" alt="Primary Faculty – Medhaa's Rainbow School" />
+                <div class="staff-photo-caption">🎒 Primary Faculty</div>
+            </div>
+            <div class="staff-photo-card">
+                <img src="images/staff_group2.jpg" alt="Complete Faculty – Medhaa's Rainbow School" />
+                <div class="staff-photo-caption">👨‍👩‍👧‍👦 Complete Faculty</div>
+            </div>
+            <div class="staff-photo-card">
+                <img src="images/staff_group3.jpg" alt="High School Faculty – Medhaa's Rainbow School" />
+                <div class="staff-photo-caption">🎓 High School Faculty</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">🌈</div>
+                <p class="footer-school-name">Medhaa's Rainbow School</p>
+                <p class="footer-tagline">School of Excellence</p>
+            </div>
+            <div class="footer-address">
+                <h4>📍 Address</h4>
+                <address>
+                    Medhaa's Rainbow School,<br />
+                    Opp Saibaba Temple Khaman,<br />
+                    Radhika Theatre Lane, ECIL,<br />
+                    Hyderabad – 500062
+                </address>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📞 +91-9948186227</p>
+                <p>📞 +91-9848573917</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Medhaa's Rainbow School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        hamburger.addEventListener('click', () => mainNav.classList.toggle('open'));
+    </script>
+</body>
+
+</html>

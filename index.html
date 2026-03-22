@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medhaa's Rainbow School – Home</title>
+    <meta name="description"
+        content="Medhaa's Rainbow School – Nurturing young minds with quality education, sports, and creative learning in ECIL, Hyderabad." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-block">
+                <div class="logo-icon">🌈</div>
+                <div class="logo-text">
+                    <span class="school-name">Medhaa's Rainbow</span>
+                    <span class="school-tagline">School of Excellence</span>
+                </div>
+            </div>
+            <!-- Hamburger for mobile -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- ===== NAVIGATION ===== -->
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                <li><a href="staff.html" class="nav-link">Staff</a></li>
+                <li><a href="#academics" class="nav-link">Academics</a></li>
+                <li><a href="#sports" class="nav-link">Sports</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO BANNER ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to<br /><span class="rainbow-text">Medhaa's Rainbow School</span></h1>
+            <p class="hero-subtitle">Empowering young minds · Building bright futures</p>
+            <div class="hero-buttons">
+                <a href="#admissions" class="btn btn-primary">Apply Now</a>
+                <a href="#about" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- ===== HIGHLIGHTS STRIP ===== -->
+    <div class="highlights-strip">
+        <div class="highlight-item">🎓 <span>Quality Education</span></div>
+        <div class="highlight-item">⚽ <span>Sports & Activities</span></div>
+        <div class="highlight-item">🎨 <span>Creative Arts</span></div>
+        <div class="highlight-item">🏆 <span>Award-Winning Faculty</span></div>
+    </div>
+
+    <!-- ===== GALLERY / SLIDESHOW ===== -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">A glimpse into our vibrant school life</p>
+        </div>
+
+        <div class="slideshow-wrapper">
+            <!-- Slides -->
+            <div class="slideshow" id="slideshow">
+                <div class="slide active">
+                    <img src="images/gallery1.jpg" alt="Classroom Learning" />
+                    <div class="slide-caption">Interactive Classroom Sessions</div>
+                </div>
+                <div class="slide">
+                    <img src="images/gallery2.jpg" alt="Teaching in Class" />
+                    <div class="slide-caption">Dedicated Teaching &amp; Learning</div>
+                </div>
+                <div class="slide">
+                    <img src="images/gallery3.jpg" alt="Classroom Activity" />
+                    <div class="slide-caption">Engaged Students, Inspired Minds</div>
+                </div>
+                <div class="slide">
+                    <img src="images/gallery4.jpg" alt="Smart Class" />
+                    <div class="slide-caption">Smart Classroom Technology</div>
+                </div>
+                <div class="slide">
+                    <img src="images/gallery5.jpg" alt="Student Interaction" />
+                    <div class="slide-caption">Hands-On Student Interaction</div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="slide-btn prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+            <button class="slide-btn next" id="nextBtn" aria-label="Next slide">&#10095;</button>
+
+            <!-- Dots -->
+            <div class="slide-dots" id="slideDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about-section" id="about">
+        <div class="section-header">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Our story, our mission</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon">🌟</div>
+                <h3>Our Vision</h3>
+                <p>To cultivate a nurturing learning environment where every child's unique potential shines like a
+                    rainbow.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">📚</div>
+                <h3>Our Mission</h3>
+                <p>Delivering holistic education combining academics, arts, and athletics to prepare students for a
+                    bright future.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">❤️</div>
+                <h3>Our Values</h3>
+                <p>Integrity, creativity, respect, and excellence are the core values that guide everything we do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CURRICULUM SECTION ===== -->
+    <section class="curriculum-section" id="academics">
+        <div class="section-header">
+            <h2 class="section-title">Our Curriculum</h2>
+            <p class="section-subtitle">A world-class learning framework designed for every child</p>
+        </div>
+
+        <!-- CBSE Badge Banner -->
+        <div class="cbse-banner">
+            <div class="cbse-badge">
+                <span class="cbse-logo">🎓</span>
+                <div>
+                    <span class="cbse-tag">INTEGRATED</span>
+                    <span class="cbse-name">CBSE Curriculum</span>
+                </div>
+            </div>
+            <p class="cbse-desc">
+                Medhaa's Rainbow School follows an <strong>Integrated CBSE Curriculum</strong> that blends
+                core academics with life skills, co-curricular activities, and digital learning — nurturing
+                well-rounded students ready for tomorrow's world.
+            </p>
+        </div>
+
+        <!-- Curriculum Subject Cards -->
+        <div class="curriculum-grid">
+            <div class="curriculum-card">
+                <div class="curriculum-icon">📖</div>
+                <h3>Languages</h3>
+                <p>English, Hindi &amp; Telugu with strong emphasis on communication, reading, and writing skills.</p>
+            </div>
+            <div class="curriculum-card">
+                <div class="curriculum-icon">🔢</div>
+                <h3>Mathematics</h3>
+                <p>Conceptual and application-based Maths as per CBSE standards from foundational to advanced levels.
+                </p>
+            </div>
+            <div class="curriculum-card">
+                <div class="curriculum-icon">🔬</div>
+                <h3>Science</h3>
+                <p>Hands-on experiments and lab activities promoting scientific inquiry and critical thinking.</p>
+            </div>
+            <div class="curriculum-card">
+                <div class="curriculum-icon">🌍</div>
+                <h3>Social Studies</h3>
+                <p>History, Geography, Civics and Economics integrated to build informed and empathetic citizens.</p>
+            </div>
+            <div class="curriculum-card">
+                <div class="curriculum-icon">💻</div>
+                <h3>Computer Science</h3>
+                <p>Digital literacy, coding basics and smart classroom tools to prepare students for the tech era.</p>
+            </div>
+            <div class="curriculum-card">
+                <div class="curriculum-icon">🎨</div>
+                <h3>Arts &amp; Activities</h3>
+                <p>Music, dance, arts and crafts woven into the curriculum for holistic creative development.</p>
+            </div>
+        </div>
+
+        <!-- Key Highlights -->
+        <div class="curriculum-highlights">
+            <div class="highlight-chip">✅ Activity-Based Learning</div>
+            <div class="highlight-chip">✅ Smart Classrooms</div>
+            <div class="highlight-chip">✅ Regular Assessments</div>
+            <div class="highlight-chip">✅ Parent-Teacher Connect</div>
+            <div class="highlight-chip">✅ Digital Resources</div>
+            <div class="highlight-chip">✅ Value Education</div>
+        </div>
+    </section>
+
+    <!-- ===== STATS STRIP ===== -->
+    <div class="stats-strip">
+        <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Students</span></div>
+        <div class="stat-item"><span class="stat-num">30+</span><span class="stat-label">Qualified Teachers</span></div>
+        <div class="stat-item"><span class="stat-num">25+</span><span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Sports & Activities</span>
+        </div>
+    </div>
+
+    <!-- ===== SPORTS SECTION ===== -->
+    <section class="sports-section" id="sports">
+        <div class="section-header">
+            <h2 class="section-title">Sports & Activities</h2>
+            <p class="section-subtitle">Building champions on and off the field</p>
+        </div>
+
+        <!-- Sports Cards -->
+        <div class="sports-grid">
+            <div class="sport-card">
+                <div class="sport-emoji">🏏</div>
+                <h3>Cricket</h3>
+                <p>Inter-school tournaments, coaching and match practice on a full-sized cricket ground.</p>
+                <span class="sport-badge sport-winner">🏆 Champions 2025–26</span>
+            </div>
+            <div class="sport-card">
+                <div class="sport-emoji">🏃</div>
+                <h3>Kho-Kho</h3>
+                <p>Traditional Indian team sport developing speed, agility and teamwork.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-emoji">🏸</div>
+                <h3>Badminton</h3>
+                <p>Indoor courts and professional coaching to bring out the best in every player.</p>
+            </div>
+            <div class="sport-card">
+                <div class="sport-emoji">🤼</div>
+                <h3>Kabaddi</h3>
+                <p>India's national sport — building strength, stamina and strategic thinking.</p>
+            </div>
+        </div>
+
+        <!-- Cricket Winners Spotlight -->
+        <div class="winners-spotlight">
+            <div class="winners-photo-wrap">
+                <img src="images/cricket_winners.jpg" alt="Cricket Winners 2025-26 – Medhaa's Rainbow School" />
+                <div class="winners-photo-overlay">
+                    <span class="trophy-icon">🏆</span>
+                    <span class="winners-label">Cricket Champions 2025–26</span>
+                </div>
+            </div>
+            <div class="winners-info">
+                <span class="winners-badge">🏅 Champions</span>
+                <h3>Cricket Winners 2025–26</h3>
+                <p class="winners-school">Medhaa's Rainbow School, ECIL, Hyderabad</p>
+                <div class="winners-divider"></div>
+                <p class="winners-message">
+                    Our young cricket stars have made us all immensely proud! 🏏 The team displayed
+                    exceptional <strong>skill, teamwork, and sportsmanship</strong> to clinch the
+                    championship title in the <strong>2025–26 inter-school cricket tournament</strong>.
+                    We celebrate every player's hard work and dedication to the game. 🌈
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ADMISSIONS CTA ===== -->
+    <section class="cta-section" id="admissions">
+        <div class="cta-inner">
+            <h2>Admissions Open 2026–27</h2>
+            <p>Give your child the gift of a rainbow education. Limited seats available!</p>
+            <a href="admissions.html" class="btn btn-primary btn-large">Enquire Now</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER / ADDRESS ===== -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">🌈</div>
+                <p class="footer-school-name">Medhaa's Rainbow School</p>
+                <p class="footer-tagline">School of Excellence</p>
+            </div>
+
+            <div class="footer-address">
+                <h4>📍 Address</h4>
+                <address>
+                    Medhaa's Rainbow School,<br />
+                    Opp Saibaba Temple Khaman,<br />
+                    Radhika Theatre Lane, ECIL,<br />
+                    Hyderabad – 500062
+                </address>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📞 +91-9948186227</p>
+                <p>📞 +91-9848573917</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">in</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Medhaa's Rainbow School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
