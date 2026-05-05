@@ -12,9 +12,10 @@ CSS3
 
 JavaScript
 
-Framework / Library (likely):
+Framework / Library :
 
-React or Next.js (common with modern static sites)
+React or Next.js 
+
 Styling:
 
 Tailwind CSS or custom CSS
